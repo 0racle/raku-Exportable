@@ -27,6 +27,7 @@ use Foo <foo bar baz>;
 
 or with tags...
 
+```
 use Foo :b;  # 'foo' not imported
 ```
 
