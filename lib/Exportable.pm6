@@ -1,3 +1,5 @@
+unit module Exportable::ver<0.0.2>;
+
 multi sub exported-EXPORT(%exports, *@names --> Hash()) {
     do for @names -> $name {
         unless %exports{ $name }:exists {
