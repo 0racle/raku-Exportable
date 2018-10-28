@@ -10,7 +10,6 @@ multi sub exported-EXPORT(%exports, *@names --> Hash()) {
 multi sub EXPORT {
     my %exports;
     multi sub trait_mod:<is>(Routine:D \r, :$exportable!) is export {
-        r.^mixin( role { method is_exportable { True } } );
         if $exportable !~~ Bool {
             trait_mod:<is>(r, :export($exportable));
         }
