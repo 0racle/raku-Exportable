@@ -9,14 +9,14 @@ SYNOPSIS
 Import in module code, and apply trait to exportable subs. Tags work normally
 
 ```perl-6
+unit module Foo;
+
 use Exportable;
 
-module Foo {
-    sub foo is exportable { ... }
-    sub bar is exportable(:b) { ... }
-    sub baz is exportable(:b) { ... }
-    sub qux { ... }
-}
+sub foo is exportable { ... }
+sub bar is exportable(:b) { ... }
+sub baz is exportable(:b) { ... }
+sub qux { ... }
 ```
 
 Module users can now import subs by name...
