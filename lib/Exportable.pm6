@@ -9,10 +9,11 @@ multi sub exported-EXPORT(%exports, *@names --> Hash()) {
 
 multi sub EXPORT {
     my %exports;
+    multi sub trait_mod:<is>(Routine:D \r, Bool :$exportable!) is export {
+        trait_mod:<is>(r, :exportable(r.name => True));
+    }
     multi sub trait_mod:<is>(Routine:D \r, :$exportable!) is export {
-        if $exportable !~~ Bool {
-            trait_mod:<is>(r, :export($exportable));
-        }
+        trait_mod:<is>(r, :export($exportable));
         %exports{ r.name } = r
     }
     {
