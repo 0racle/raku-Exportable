@@ -1,14 +1,15 @@
 {
    "name" : "Exportable",
-   "version" : "0.0.3",
+   "auth": "zef:elcaro",
+   "version" : "0.0.4",
    "description" : "Simple function exporting",
-   "perl" : "6.c",
+   "raku" : "6.c",
    "authors" : [ "Joshua Yeshouroun" ],
    "provides" : {
       "Exportable" : "lib/Exportable.pm6"
    },
    "depends" : [ ],
-   "source-url" : "git://github.com/0racle/p6-Exportable.git",
+   "source-url" : "git://github.com/0racle/raku-Exportable.git",
    "license"    : "Artistic-2.0"
 }
 
